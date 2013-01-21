@@ -15,31 +15,97 @@
 	<script src="js/jquery.mobile.iscrollview-min.js" type="text/javascript"></script>
 	<script src="js/utils.js" type="text/javascript"></script>
 	<script src="js/HotspotsCollection.js" type="text/javascript"></script>
-	<script src="js/Point.js" type="text/javascript"></script>
+	<script src="js/Point.js" type="text/javascript"></script>	
+	<script src="js/usig.Punto.min.js" type="text/javascript"></script>
+	<script src="js/usig.AutoCompleterFull.min.js" type="text/javascript"></script>
+	<script src="js/usig.Recorridos.min.js" type="text/javascript"></script>
 	<script src="js/index.js" type="text/javascript"></script>
 </head> 
 <body> 
-    <div data-role="page" id="index-page">
-      <div data-role="header" data-position="fixed" id="index-header">
+
+    <!-- ORDENADO POR COMUNA-->
+    <div data-role="page" id="sorted-by-comuna-page">
+      <div data-role="header" data-position="fixed" id="sorted-by-comuna-header">
         <h1>BA Wifi</h1>
       </div>
-
-      <div data-role="content" id="index-content" data-iscroll>
-				<ul id="hotspots" data-role="listview" data-filter="true">
+      <div data-role="content" id="sorted-by-comuna-content" data-iscroll>
+				<ul id="hotspots-comuna" data-role="listview" data-filter="true">
 				</ul>
       </div>
-
       <div data-role="footer" data-position="fixed" data-tap-toggle="false">
 				<div data-role="navbar">
 					<ul>
-						<li><button>Por categoria</button></li>
-						<li><button id="hotspots-by-distance">Cerca de mi</button></li>
-						<li><button id="hotspots-by-comuna">Por comuna</button></li>				
+						<li><a class="sorted-by-categoria-btn" href="#sorted-by-categoria-page">Por categoria</a></li>
+						<li><a class="sorted-by-cerca-btn" href="#sorted-by-cerca-page">Cerca de mi</a></li>
+						<li><a class="sorted-by-comuna-btn" href="#sorted-by-comuna-page">Por comuna</a></li>				
 					</ul>
 				</div><!-- /navbar -->
       </div>
-
     </div>
+    <!-- FIN ORDENADO POR COMUNA-->
 
+		<!-- ORDENADO POR CERCANIA-->
+    <div data-role="page" id="sorted-by-cerca-page">
+      <div data-role="header" data-position="fixed" id="cerca-header">
+        <h1>BA Wifi</h1>
+      </div>
+      <div data-role="content" id="cerca-content" data-iscroll>
+				<ul id="hotspots-cerca" data-role="listview" data-filter="true">
+				</ul>
+      </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+				<div data-role="navbar">
+					<ul>
+						<li><a class="sorted-by-categoria-btn" href="#sorted-by-categoria-page">Por categoria</a></li>
+						<li><a class="sorted-by-cerca-btn" href="#sorted-by-cerca-page">Cerca de mi</a></li>
+						<li><a class="sorted-by-comuna-btn" href="#sorted-by-comuna-page">Por comuna</a></li>		
+					</ul>
+				</div><!-- /navbar -->
+      </div>
+    </div>
+    <!-- FIN ORDENADO POR CERCANIA-->
+
+		<!-- ORDENADO POR CATEGORIA-->
+    <div data-role="page" id="sorted-by-categoria-page">
+      <div data-role="header" data-position="fixed" id="categoria-header">
+        <h1>BA Wifi</h1>
+      </div>
+      <div data-role="content" id="categoria-content" data-iscroll>
+				<ul id="hotspots-categoria" data-role="listview" data-filter="true">
+				</ul>
+      </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+				<div data-role="navbar">
+					<ul>
+						<li><a class="sorted-by-categoria-btn" href="#sorted-by-categoria-page">Por categoria</a></li>
+						<li><a class="sorted-by-cerca-btn" href="#sorted-by-cerca-page">Cerca de mi</a></li>
+						<li><a class="sorted-by-comuna-btn" href="#sorted-by-comuna-page">Por comuna</a></li>		
+					</ul>
+				</div><!-- /navbar -->
+      </div>
+    </div>
+    <!-- FIN ORDENADO POR CATEGORIA-->      
+
+    <!-- RECORRIDOS-->
+    <div data-role="page" id="recorridos">
+      <div data-role="header" data-position="fixed" id="recorridos-header">
+        <h1>BA Wifi</h1>
+      </div>
+      <div data-role="content" id="recorridos-content" data-iscroll>
+				<ul id="hotspots-comuna" data-role="listview" data-filter="true">
+				</ul>
+      </div>
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+				<div data-role="navbar">
+					<ul>
+						<li><a class="sorted-by-categoria-btn" href="#sorted-by-categoria-page">Por categoria</a></li>
+						<li><a class="sorted-by-cerca-btn" href="#sorted-by-cerca-page">Cerca de mi</a></li>
+						<li><a class="sorted-by-comuna-btn" href="#sorted-by-comuna-page">Por comuna</a></li>				
+					</ul>
+				</div><!-- /navbar -->
+      </div>
+    </div>
+    <!-- FIN RECORRIDOS-->
+     
 </body>
 </html>
