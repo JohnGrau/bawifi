@@ -1,5 +1,17 @@
 var hotspots = [
     {
+        "aps": "APs",
+        "domicilio": "Direcci&#243;n Normalizada",
+        "gkba_lat": "",
+        "gkba_long": "",
+        "lat": "Lat",
+        "long": "Long",
+        "nombre": "Nombre",
+        "nro_comuna": "Comuna",
+        "tipo": "Sitio",
+        "tipo_normalizado": "sitio"
+    },
+    {
         "aps": "1",
         "domicilio": "DIAZ VELEZ AV. y MARECHAL, LEOPOLDO",
         "gkba_lat": "102286.75",
@@ -8,7 +20,8 @@ var hotspots = [
         "long": "-58.437225",
         "nombre": "Parque Centenario",
         "nro_comuna": "6",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -19,7 +32,8 @@ var hotspots = [
         "long": "-58.433883",
         "nombre": "Parque Centenario",
         "nro_comuna": "6",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -30,7 +44,8 @@ var hotspots = [
         "long": "-58.444093",
         "nombre": "Parque Chacabuco",
         "nro_comuna": "7",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -41,7 +56,8 @@ var hotspots = [
         "long": "-58.444093",
         "nombre": "Parque Chacabuco",
         "nro_comuna": "7",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -52,7 +68,8 @@ var hotspots = [
         "long": "-58.498287",
         "nombre": "Parque Sarmiento",
         "nro_comuna": "14",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -63,7 +80,8 @@ var hotspots = [
         "long": "-58.425084",
         "nombre": "Parque de la Memoria",
         "nro_comuna": "14",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -74,7 +92,8 @@ var hotspots = [
         "long": "-58.369449",
         "nombre": "Parque Lezama",
         "nro_comuna": "4",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -85,7 +104,8 @@ var hotspots = [
         "long": "-58.449155",
         "nombre": "Plaza Los Andes",
         "nro_comuna": "15",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -96,7 +116,8 @@ var hotspots = [
         "long": "-58.374934",
         "nombre": "Av. de Mayo y Per&#250;",
         "nro_comuna": "1",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -107,7 +128,8 @@ var hotspots = [
         "long": "-58.374854",
         "nombre": "Diagonal Sur y Per&#250;",
         "nro_comuna": "1",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -118,7 +140,8 @@ var hotspots = [
         "long": "-58.373519",
         "nombre": "Plaza de Mayo",
         "nro_comuna": "1",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -129,7 +152,8 @@ var hotspots = [
         "long": "-58.511608",
         "nombre": "Plaza Arenales",
         "nro_comuna": "11",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -140,7 +164,8 @@ var hotspots = [
         "long": "-58.382005",
         "nombre": "Plaza de la Republica",
         "nro_comuna": "1",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -151,7 +176,8 @@ var hotspots = [
         "long": "-58.507500",
         "nombre": "Plaza Don Bosco",
         "nro_comuna": "10",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -162,7 +188,8 @@ var hotspots = [
         "long": "-58.512466",
         "nombre": "Parque Santojanni",
         "nro_comuna": "9",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -173,7 +200,8 @@ var hotspots = [
         "long": "-58.464245",
         "nombre": "Parque de las Victorias",
         "nro_comuna": "8",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -184,7 +212,8 @@ var hotspots = [
         "long": "-58.455664",
         "nombre": "Plaza Belgrano",
         "nro_comuna": "13",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -195,7 +224,8 @@ var hotspots = [
         "long": "-58.383794",
         "nombre": "Parque Espa&#241;a",
         "nro_comuna": "4",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -206,7 +236,8 @@ var hotspots = [
         "long": "-58.417884",
         "nombre": "Jard&#237;n Bot&#225;nico",
         "nro_comuna": "14",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -217,7 +248,8 @@ var hotspots = [
         "long": "-58.415528",
         "nombre": "Jard&#237;n Bot&#225;nico",
         "nro_comuna": "14",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -228,7 +260,8 @@ var hotspots = [
         "long": "-58.400829",
         "nombre": "Circuito KDT",
         "nro_comuna": "14",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -239,7 +272,8 @@ var hotspots = [
         "long": "-58.385280",
         "nombre": "Plaza Lavalle",
         "nro_comuna": "1",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -250,7 +284,8 @@ var hotspots = [
         "long": "-58.490958",
         "nombre": "Parque del Precinto 12",
         "nro_comuna": "12",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -261,7 +296,8 @@ var hotspots = [
         "long": "",
         "nombre": "Caminito",
         "nro_comuna": "4",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -272,7 +308,8 @@ var hotspots = [
         "long": "-58.391722",
         "nombre": "Facultad de Derecho",
         "nro_comuna": "2",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -283,7 +320,8 @@ var hotspots = [
         "long": "-58.366001",
         "nombre": "Moreau de Justo y Chile",
         "nro_comuna": "1",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -294,7 +332,8 @@ var hotspots = [
         "long": "-58.377857",
         "nombre": "Plaza Roberto Arlt",
         "nro_comuna": "1",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -305,7 +344,8 @@ var hotspots = [
         "long": "-58.389396",
         "nombre": "Parque Thais",
         "nro_comuna": "2",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -316,7 +356,8 @@ var hotspots = [
         "long": "-58.441814",
         "nombre": "Parque Roca",
         "nro_comuna": "8",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -327,7 +368,8 @@ var hotspots = [
         "long": "-58.468717",
         "nombre": "Parque Indoamericano",
         "nro_comuna": "8",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -338,7 +380,8 @@ var hotspots = [
         "long": "-58.478021",
         "nombre": "Parque Avellaneda",
         "nro_comuna": "9",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -349,7 +392,8 @@ var hotspots = [
         "long": "-58.405609",
         "nombre": "Parque Patricios",
         "nro_comuna": "4",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -360,7 +404,8 @@ var hotspots = [
         "long": "-58.382436",
         "nombre": "Plaza Vaticano",
         "nro_comuna": "1",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -371,7 +416,8 @@ var hotspots = [
         "long": "-58.429221",
         "nombre": "Paseo de la Victoria",
         "nro_comuna": "5",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -382,7 +428,8 @@ var hotspots = [
         "long": "-58.444513",
         "nombre": "Parque Roca (BA Playa)",
         "nro_comuna": "8",
-        "tipo": "Espacios P&#250;blicos "
+        "tipo": "Espacios P&#250;blicos ",
+        "tipo_normalizado": "espacios_publicos"
     },
     {
         "aps": "1",
@@ -393,7 +440,8 @@ var hotspots = [
         "long": "-58.379339",
         "nombre": "CMD",
         "nro_comuna": "4",
-        "tipo": "Centros de Exposiciones "
+        "tipo": "Centros de Exposiciones ",
+        "tipo_normalizado": "centros_de_exposiciones"
     },
     {
         "aps": "1",
@@ -404,7 +452,8 @@ var hotspots = [
         "long": "-58.389396",
         "nombre": "Centro Municipal de Exposiciones",
         "nro_comuna": "2",
-        "tipo": "Centros de Exposiciones "
+        "tipo": "Centros de Exposiciones ",
+        "tipo_normalizado": "centros_de_exposiciones"
     },
     {
         "aps": "1",
@@ -415,7 +464,8 @@ var hotspots = [
         "long": "-58.386814",
         "nombre": "Centro Cultural del Sur",
         "nro_comuna": "4",
-        "tipo": "Centros de Exposiciones "
+        "tipo": "Centros de Exposiciones ",
+        "tipo_normalizado": "centros_de_exposiciones"
     },
     {
         "aps": "1",
@@ -426,7 +476,8 @@ var hotspots = [
         "long": "-58.386822",
         "nombre": "Sede Comunal 1",
         "nro_comuna": "1",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -437,7 +488,8 @@ var hotspots = [
         "long": "-58.398843",
         "nombre": "Sede Comunal 2",
         "nro_comuna": "2",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -448,7 +500,8 @@ var hotspots = [
         "long": "-58.396911",
         "nombre": "Sede Comunal 3",
         "nro_comuna": "3",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -459,7 +512,8 @@ var hotspots = [
         "long": "-58.424655",
         "nombre": "Sede Comunal 4",
         "nro_comuna": "4",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -470,7 +524,8 @@ var hotspots = [
         "long": "-58.412663",
         "nombre": "Sede Comunal 5",
         "nro_comuna": "5",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -481,7 +536,8 @@ var hotspots = [
         "long": "-58.496321",
         "nombre": "Subsede Comunal 5",
         "nro_comuna": "5",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -492,7 +548,8 @@ var hotspots = [
         "long": "-58.433030",
         "nombre": "Sede Comunal 6",
         "nro_comuna": "6",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -503,7 +560,8 @@ var hotspots = [
         "long": "-58.441110",
         "nombre": "Subsede Comunal 6",
         "nro_comuna": "6",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -514,7 +572,8 @@ var hotspots = [
         "long": "-58.467002",
         "nombre": "Sede Comunal 7",
         "nro_comuna": "7",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -525,7 +584,8 @@ var hotspots = [
         "long": "-58.455339",
         "nombre": "Sede Comunal 8",
         "nro_comuna": "8",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -536,7 +596,8 @@ var hotspots = [
         "long": "-58.505090",
         "nombre": "Sede Comunal 9",
         "nro_comuna": "9",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -547,7 +608,8 @@ var hotspots = [
         "long": "-58.487446",
         "nombre": "Subsede Comunal 9",
         "nro_comuna": "9",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -558,7 +620,8 @@ var hotspots = [
         "long": "-58.483567",
         "nombre": "Sede Comunal 10",
         "nro_comuna": "10",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -569,7 +632,8 @@ var hotspots = [
         "long": "-58.515994",
         "nombre": "Sede Comunal 11",
         "nro_comuna": "11",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -580,7 +644,8 @@ var hotspots = [
         "long": "-58.496321",
         "nombre": "Subsede Comunal 11",
         "nro_comuna": "11",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -591,7 +656,8 @@ var hotspots = [
         "long": "-58.482917",
         "nombre": "Sede Comunal 12",
         "nro_comuna": "12",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -602,7 +668,8 @@ var hotspots = [
         "long": "-58.463982",
         "nombre": "Sede Comunal 13",
         "nro_comuna": "13",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -613,7 +680,8 @@ var hotspots = [
         "long": "-58.409437",
         "nombre": "Sede Comunal 14",
         "nro_comuna": "14",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -624,7 +692,8 @@ var hotspots = [
         "long": "-58.441255",
         "nombre": "Sede Comunal 15",
         "nro_comuna": "15",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -635,7 +704,8 @@ var hotspots = [
         "long": "-58.455339",
         "nombre": "Direcci&#243;n de Licencias",
         "nro_comuna": "8",
-        "tipo": "Centros Culturales"
+        "tipo": "Centros Culturales",
+        "tipo_normalizado": "centros_culturales"
     },
     {
         "aps": "1",
@@ -646,7 +716,8 @@ var hotspots = [
         "long": "-58.426348",
         "nombre": "Biblioteca &#8220;Miguel Can&#233;&#8221;",
         "nro_comuna": "5",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -657,7 +728,8 @@ var hotspots = [
         "long": "-58.474956",
         "nombre": "Biblioteca &#8220;El Progreso&#8221;",
         "nro_comuna": "8",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -668,7 +740,8 @@ var hotspots = [
         "long": "-58.496872",
         "nombre": "Biblioteca &#8220;Benito Lynch&#8221;",
         "nro_comuna": "9",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -679,7 +752,8 @@ var hotspots = [
         "long": "-58.473532",
         "nombre": "Biblioteca &#8220;Julio Saguier&#8221;",
         "nro_comuna": "8",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -690,7 +764,8 @@ var hotspots = [
         "long": "-58.429803",
         "nombre": "Biblioteca &#8220;Cort&#225;zar&#8221;",
         "nro_comuna": "15",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -701,7 +776,8 @@ var hotspots = [
         "long": "-58.407557",
         "nombre": "Biblioteca &#8220;Enrique Banchs&#8221;",
         "nro_comuna": "4",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -712,7 +788,8 @@ var hotspots = [
         "long": "-58.461687",
         "nombre": "Biblioteca &#8220;Jos&#233; M&#225;rmol&#8221;",
         "nro_comuna": "13",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -723,7 +800,8 @@ var hotspots = [
         "long": "-58.463552",
         "nombre": "Biblioteca &#8220;&#193;lvaro Yunque&#8221;",
         "nro_comuna": "8",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -734,7 +812,8 @@ var hotspots = [
         "long": "-58.388141",
         "nombre": "Biblioteca &#8220;Alfonsina Storni&#8221;",
         "nro_comuna": "1",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -745,7 +824,8 @@ var hotspots = [
         "long": "-58.448721",
         "nombre": "Biblioteca &#8220;Reina Batata&#8221;",
         "nro_comuna": "13",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -756,7 +836,8 @@ var hotspots = [
         "long": "-58.423875",
         "nombre": "Biblioteca &#8220;Carlos Guido y Spano&#8221;",
         "nro_comuna": "14",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -767,7 +848,8 @@ var hotspots = [
         "long": "-58.510894",
         "nombre": "Biblioteca &#8220;Antonio Devoto&#8221;",
         "nro_comuna": "11",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -778,7 +860,8 @@ var hotspots = [
         "long": "-58.389138",
         "nombre": "Biblioteca &#8220;Manuel G&#225;lvez&#8221;",
         "nro_comuna": "1",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -789,7 +872,8 @@ var hotspots = [
         "long": "-58.391479",
         "nombre": "Biblioteca del Docente",
         "nro_comuna": "3",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -800,7 +884,8 @@ var hotspots = [
         "long": "-58.434504",
         "nombre": "Biblioteca &#8220;Javier Villafa&#241;e&#8221;",
         "nro_comuna": "7",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -811,7 +896,8 @@ var hotspots = [
         "long": "-58.452595",
         "nombre": "Biblioteca &#8220;Leopoldo Lugones&#8221;",
         "nro_comuna": "13",
-        "tipo": "Bibliotecas "
+        "tipo": "Bibliotecas ",
+        "tipo_normalizado": "bibliotecas"
     },
     {
         "aps": "1",
@@ -822,7 +908,8 @@ var hotspots = [
         "long": "-58.388642",
         "nombre": "Teatro San Mart&#237;n",
         "nro_comuna": "1",
-        "tipo": "Teatros"
+        "tipo": "Teatros",
+        "tipo_normalizado": "teatros"
     },
     {
         "aps": "1",
@@ -833,7 +920,8 @@ var hotspots = [
         "long": "-58.357034",
         "nombre": "Usina del Arte",
         "nro_comuna": "4",
-        "tipo": "Teatros"
+        "tipo": "Teatros",
+        "tipo_normalizado": "teatros"
     },
     {
         "aps": "1",
@@ -844,7 +932,8 @@ var hotspots = [
         "long": "-58.438438",
         "nombre": "Anfiteatro Parque Centenario",
         "nro_comuna": "5",
-        "tipo": "Teatros"
+        "tipo": "Teatros",
+        "tipo_normalizado": "teatros"
     },
     {
         "aps": "1",
@@ -855,7 +944,8 @@ var hotspots = [
         "long": "-58.455265",
         "nombre": "Museo &#8220;Larreta&#8221;",
         "nro_comuna": "13",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -866,7 +956,8 @@ var hotspots = [
         "long": "-58.372076",
         "nombre": "Museo de la Ciudad",
         "nro_comuna": "1",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -877,7 +968,8 @@ var hotspots = [
         "long": "-58.421163",
         "nombre": "Museo &#8220;S&#237;vori&#8221;",
         "nro_comuna": "14",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -888,7 +980,8 @@ var hotspots = [
         "long": "-58.405195",
         "nombre": "Museo &#8220;Jose Hern&#225;ndez&#8221;",
         "nro_comuna": "14",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -899,7 +992,8 @@ var hotspots = [
         "long": "-58.370727",
         "nombre": "Museo de Arte Moderno",
         "nro_comuna": "1",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -910,7 +1004,8 @@ var hotspots = [
         "long": "-58.356953",
         "nombre": "Museo del Cine",
         "nro_comuna": "4",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -921,7 +1016,8 @@ var hotspots = [
         "long": "-58.378872",
         "nombre": "Museo del Cine &#8220;Pablo Ducros Hicken&#8221;",
         "nro_comuna": "4",
-        "tipo": "Otros Establecimientos"
+        "tipo": "Otros Establecimientos",
+        "tipo_normalizado": "otros_establecimientos"
     },
     {
         "aps": "1",
@@ -932,7 +1028,8 @@ var hotspots = [
         "long": "-58.374656",
         "nombre": "Torre Monumental",
         "nro_comuna": "1",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -943,7 +1040,8 @@ var hotspots = [
         "long": "-58.448257",
         "nombre": "Museo &#8220;Luis Perlotti&#8221;",
         "nro_comuna": "6",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -954,7 +1052,8 @@ var hotspots = [
         "long": "-58.379942",
         "nombre": "Museo &#8220;Fern&#225;ndez Blanco&#8221;",
         "nro_comuna": "1",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -965,7 +1064,8 @@ var hotspots = [
         "long": "-58.407920",
         "nombre": "Museo &#8220;Carlos Gardel&#8221;",
         "nro_comuna": "3",
-        "tipo": "Museos "
+        "tipo": "Museos ",
+        "tipo_normalizado": "museos"
     },
     {
         "aps": "1",
@@ -976,7 +1076,8 @@ var hotspots = [
         "long": "-58.438435",
         "nombre": "Hospital &#8220;Mar&#237;a Curi&#233;&#8221;",
         "nro_comuna": "6",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -987,7 +1088,8 @@ var hotspots = [
         "long": "-58.515802",
         "nombre": "Hospital &#8220;Santojanni&#8221;",
         "nro_comuna": "9",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -998,7 +1100,8 @@ var hotspots = [
         "long": "-58.360192",
         "nombre": "Hospital &#8220;Benito Quinquela Mart&#237;n&#8221;",
         "nro_comuna": "4",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -1009,7 +1112,8 @@ var hotspots = [
         "long": "-58.511205",
         "nombre": "Hospital &#8220;Zubizarreta&#8221;",
         "nro_comuna": "11",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -1020,7 +1124,8 @@ var hotspots = [
         "long": "-58.507500",
         "nombre": "Hospital &#8220;V&#233;lez Sarsfield&#8221;",
         "nro_comuna": "10",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -1031,7 +1136,8 @@ var hotspots = [
         "long": "-58.392999",
         "nombre": "Hospital &#8220;Mu&#241;iz&#8221;",
         "nro_comuna": "4",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -1042,7 +1148,8 @@ var hotspots = [
         "long": "-58.449155",
         "nombre": "CESAC 22",
         "nro_comuna": "15",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -1053,7 +1160,8 @@ var hotspots = [
         "long": "-58.478148",
         "nombre": "CESAC 34",
         "nro_comuna": "15",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -1064,7 +1172,8 @@ var hotspots = [
         "long": "-58.409825",
         "nombre": "CESAC 39",
         "nro_comuna": "4",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -1075,7 +1184,8 @@ var hotspots = [
         "long": "-58.357830",
         "nombre": "CESAC 41",
         "nro_comuna": "4",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -1086,7 +1196,8 @@ var hotspots = [
         "long": "-58.402258",
         "nombre": "CESAC 45",
         "nro_comuna": "8",
-        "tipo": "Hospitales y CESACs"
+        "tipo": "Hospitales y CESACs",
+        "tipo_normalizado": "hospitales_y_cesacs"
     },
     {
         "aps": "1",
@@ -1097,7 +1208,8 @@ var hotspots = [
         "long": "-58.380819",
         "nombre": "Mercado del Plata",
         "nro_comuna": "1",
-        "tipo": "Otros Establecimientos"
+        "tipo": "Otros Establecimientos",
+        "tipo_normalizado": "otros_establecimientos"
     },
     {
         "aps": "1",
@@ -1108,7 +1220,8 @@ var hotspots = [
         "long": "-58.468717",
         "nombre": "CIFA",
         "nro_comuna": "8",
-        "tipo": "Otros Establecimientos"
+        "tipo": "Otros Establecimientos",
+        "tipo_normalizado": "otros_establecimientos"
     },
     {
         "aps": "1",
@@ -1119,7 +1232,8 @@ var hotspots = [
         "long": "-58.452136",
         "nombre": "UGIS (Unidad de Gesti&#243;n de Intervenci&#243;n Social)",
         "nro_comuna": "8",
-        "tipo": "Otros Establecimientos"
+        "tipo": "Otros Establecimientos",
+        "tipo_normalizado": "otros_establecimientos"
     },
     {
         "aps": "1",
@@ -1130,7 +1244,8 @@ var hotspots = [
         "long": "-58.431117",
         "nombre": "Dir. Gral. Sistemas Pluviales",
         "nro_comuna": "14",
-        "tipo": "Otros Establecimientos"
+        "tipo": "Otros Establecimientos",
+        "tipo_normalizado": "otros_establecimientos"
     },
     {
         "aps": "1",
@@ -1141,7 +1256,8 @@ var hotspots = [
         "long": "-58.361401",
         "nombre": "Dir. Gral. de Museos",
         "nro_comuna": "1",
-        "tipo": "Otros Establecimientos"
+        "tipo": "Otros Establecimientos",
+        "tipo_normalizado": "otros_establecimientos"
     },
     {
         "aps": "1",
@@ -1152,6 +1268,35 @@ var hotspots = [
         "long": "-58.455730",
         "nombre": "Cementerio Chacarita",
         "nro_comuna": "15",
-        "tipo": "Otros Establecimientos"
+        "tipo": "Otros Establecimientos",
+        "tipo_normalizado": "otros_establecimientos"
     }
-]
+];
+var tipos = {
+    "bibliotecas": "Bibliotecas",
+    "centros_culturales": "Centros Culturales",
+    "centros_de_exposiciones": "Centros de Exposiciones",
+    "espacios_publicos": "Espacios P&#250;blicos",
+    "hospitales_y_cesacs": "Hospitales y CESACs",
+    "museos": "Museos",
+    "otros_establecimientos": "Otros Establecimientos",
+    "sitio": "Sitio",
+    "teatros": "Teatros"
+};
+var comunas = [
+    "Comuna 1",
+    "Comuna 2",
+    "Comuna 3",
+    "Comuna 4",
+    "Comuna 5",
+    "Comuna 6",
+    "Comuna 7",
+    "Comuna 8",
+    "Comuna 9",
+    "Comuna 10",
+    "Comuna 11",
+    "Comuna 12",
+    "Comuna 13",
+    "Comuna 14",
+    "Comuna 15"
+];
