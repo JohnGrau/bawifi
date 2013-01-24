@@ -18,9 +18,6 @@ var App = (function(global, hotspots){
 		//mostrar algo que indique que todavia no se localizo
 	  log("error en geolocalizar");
 	};
-	var clearMenu = function(){
-		$("div[data-role=navbar] li a").removeClass("ui-btn-active ui-state-persist");					
-	}
 	return {
 		init: function(){
 			var that = this;
@@ -35,25 +32,20 @@ var App = (function(global, hotspots){
 			
 			//phonegap listo y jquery mobile listo
 			$.when(jqmReady, pgReady).then(function () {
-				
 			 	HotspotsCollection.addGroups("comunas");
-			 	$(".sorted-by-comuna-btn").addClass("ui-btn-active ui-state-persist");
-			 	$("#categorias li a").on('tap',function(e){
+			 	$("#categorias li a").on('taphold',function(e){
 			 		$this = $(this);
 			 		log($this.jqmData("key"));
 			 	});
-				$(".sorted-by-cerca-btn").on('tap', function(e){
-					clearMenu();
+				$(".sorted-by-cerca-btn").on('taphold', function(e){
 					//HotspotsCollection.addGroups("");
 					//HotspotsCollection.addHotspots("Distance","hotspots");
 				});
-				$(".sorted-by-comuna-btn").on('tap', function(e){		
-					clearMenu();
+				$(".sorted-by-comuna-btn").on('taphold', function(e){		
 					HotspotsCollection.addGroups("comunas");
 					//HotspotsCollection.addHotspots("Comuna","hotspots");
 				});
-				$(".sorted-by-tipo-btn").on('tap', function(e){			
-					clearMenu();
+				$(".sorted-by-tipo-btn").on('taphold', function(e){		
 					HotspotsCollection.addGroups("tipos");
 					//HotspotsCollection.addHotspots("Categoria","hotspots");
 				});							

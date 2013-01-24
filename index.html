@@ -8,36 +8,36 @@
 	<link rel="stylesheet" href="css/jquery.mobile.iscrollview-pull.css" />
 	<link rel="stylesheet" href="css/styles.css" />
 	<script src="data/data.js"></script>
-	<script src="js/jquery-1.8.2.min.js"></script>
-	<script src="js/jquery.mobile-1.2.0.min.js"></script>
-	<script src="js/cordova-2.3.0.js" type="text/javascript"></script>
-	<script src="js/iscroll.js" type="text/javascript"></script>
-	<script src="js/jquery.mobile.iscrollview-min.js" type="text/javascript"></script>
-	<script src="js/utils.js" type="text/javascript"></script>
-	<script src="js/HotspotsCollection.js" type="text/javascript"></script>
-	<script src="js/Point.js" type="text/javascript"></script>	
-	<script src="js/usig.Punto.min.js" type="text/javascript"></script>
-	<script src="js/usig.RecorridosFull.min.js" type="text/javascript"></script>
-	<script src="js/UsigLite.js" type="text/javascript"></script>
+	<script src="js/vendor/jquery-1.8.2.min.js"></script>
+	<script src="js/vendor/jquery.mobile-1.2.0.min.js"></script>
+	<script src="js/vendor/cordova-2.3.0.js" type="text/javascript"></script>
+	<script src="js/vendor/iscroll.js" type="text/javascript"></script>
+	<script src="js/vendor/jquery.mobile.iscrollview-min.js" type="text/javascript"></script>
+	<script src="js/usig/usig.Punto.min.js" type="text/javascript"></script>
+	<script src="js/usig/usig.RecorridosFull.min.js" type="text/javascript"></script>	
+	<script src="js/modules/HotspotsCollection.js" type="text/javascript"></script>
+	<script src="js/modules/Point.js" type="text/javascript"></script>	
+	<script src="js/modules/UsigLite.js" type="text/javascript"></script>
+	<script src="js/utils.js" type="text/javascript"></script>	
 	<script src="js/index.js" type="text/javascript"></script>
 </head> 
 <body> 
 
     <!-- LISTA CATEGORIA-->
     <div data-role="page" id="categorias-page">
-      <div data-role="header" data-position="fixed" id="categorias-header">
+      <div data-role="header" data-position="fixed" id="categorias-header" data-id="header">
         <h1>BA Wifi</h1>
       </div>
       <div data-role="content" id="categorias-content" data-iscroll>
 				<ul id="categorias" data-role="listview" data-filter="true">
 				</ul>
       </div>
-      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="footer-nav">
 				<div data-role="navbar">
 					<ul>
-						<li><a href="#categorias-page" data-transition="none" class="sorted-by-tipo-btn">Por tipo</a></li>
-						<li><a href="#hotspots-page" data-transition="none" class="sorted-by-cerca-btn">Cerca de mi</a></li>
-						<li><a href="#categorias-page" data-transition="none" class="sorted-by-comuna-btn">Por comuna</a></li>
+						<li><a href="#categorias-page" class="sorted-by-tipo-btn">Por tipo</a></li>
+						<li><a href="#hotspots-page" class="sorted-by-cerca-btn">Cerca de mi</a></li>
+						<li><a href="#categorias-page" class="sorted-by-comuna-btn">Por comuna</a></li>
 					</ul>
 				</div><!-- /navbar -->
       </div>
@@ -46,19 +46,19 @@
 
 		<!-- LISTA HOTSPOTS-->
     <div data-role="page" id="hotspots-page">
-      <div data-role="header" data-position="fixed" id="hotspots-header">
+      <div data-role="header" data-position="fixed" id="hotspots-header" data-id="header">
         <h1>BA Wifi</h1>
       </div>
       <div data-role="content" id="hotspots-content" data-iscroll>
 				<ul id="hotspots" data-role="listview" data-filter="true">
 				</ul>
       </div>
-      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="footer-nav">
 				<div data-role="navbar">
 					<ul>
-						<li><a href="#categorias-page" data-transition="none" class="sorted-by-tipo-btn">Por tipo</a></li>
-						<li><a href="#hotspots-page" data-transition="none" class="sorted-by-cerca-btn">Cerca de mi</a></li>
-						<li><a href="#categorias-page" data-transition="none" class="sorted-by-comuna-btn">Por comuna</a></li>
+						<li><a href="#categorias-page" class="sorted-by-tipo-btn">Por tipo</a></li>
+						<li><a href="#hotspots-page" class="sorted-by-cerca-btn">Cerca de mi</a></li>
+						<li><a href="#categorias-page" class="sorted-by-comuna-btn">Por comuna</a></li>
 					</ul>
 				</div><!-- /navbar -->
       </div>
@@ -67,19 +67,19 @@
 
     <!-- RECORRIDOS-->
     <div data-role="page" id="recorridos-page">
-      <div data-role="header" data-position="fixed" id="recorridos-header">
+      <div data-role="header" data-position="fixed" id="recorridos-header" data-id="header">
         <h1>BA Wifi</h1>
       </div>
       <div data-role="content" id="recorridos-content" data-iscroll>
 				<ul id="recorrido" data-role="listview" data-filter="true">
 				</ul>
       </div>
-      <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+      <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="footer-nav">
 				<div data-role="navbar">
 					<ul>
-						<li><a href="#categorias-page" data-transition="none" class="sorted-by-tipo-btn">Por tipo</a></li>
-						<li><a href="#hotspots-page" data-transition="none" class="sorted-by-cerca-btn">Cerca de mi</a></li>
-						<li><a href="#categorias-page" data-transition="none" class="sorted-by-comuna-btn">Por comuna</a></li>		
+						<li><a href="#categorias-page" class="sorted-by-tipo-btn">Por tipo</a></li>
+						<li><a href="#hotspots-page" class="sorted-by-cerca-btn">Cerca de mi</a></li>
+						<li><a href="#categorias-page" class="sorted-by-comuna-btn">Por comuna</a></li>
 					</ul>
 				</div><!-- /navbar -->
       </div>
