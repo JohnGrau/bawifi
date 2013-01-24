@@ -15,7 +15,6 @@ li{
 	-webkit-transform: translateZ(0) !important;
 }
 @media only screen and (max-height: 280px){
- 
 
     .ui-header .ui-btn {
         display: none !important;

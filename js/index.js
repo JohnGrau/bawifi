@@ -3,12 +3,12 @@ var App = (function(global, hotspots){
 	var whereami;
 	var jqmReady = $.Deferred(),
 	    pgReady = $.Deferred(),
-	    gcReady = $.Deferred;
+	    gcReady = $.Deferred();
 
 	var onSuccess = function(position) {
 		//grabo la geolocalizacion
 	  whereami = new Point(position.coords.latitude, position.coords.longitude);
-		UsigLite.convertCoords({"longitud": whereami.longitud, "latitude":whereami.latitude}, function(puntousig){
+		UsigLite.convertCoords({"longitud": whereami.longitud, "latitud":whereami.latitud}, function(error, puntousig){
 			whereami.setGKBAPoint(puntousig);
 			gcReady.resolve();
 		});
@@ -23,6 +23,8 @@ var App = (function(global, hotspots){
 		init: function(){
 			var that = this;
 			$.mobile.listview.prototype.options.filterPlaceholder = "Buscar wifi...";
+			$.mobile.allowCrossDomainPages = true;
+
 			$(document).on("pageinit", jqmReady.resolve);
 			document.addEventListener("deviceready", function(){
 				navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });	
@@ -34,7 +36,7 @@ var App = (function(global, hotspots){
 				
 			 	HotspotsCollection.addGroups("comunas");
 			 	$("#categorias li").on('tap',function(e){
-			 		alert(e);
+			 		
 			 	});
 				$(".sorted-by-cerca-btn").on('tap', function(e){
 					//HotspotsCollection.addGroups("");

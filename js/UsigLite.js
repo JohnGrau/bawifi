@@ -17,7 +17,7 @@ var UsigLite = (function() {
 			});  
 		},
 		reverseGeocoder: function(punto, callback){
-			$.get("http://ws.usig.buenosaires.gob.ar/geocoder/2.2/reversegeocoding?x="+punto.getX()+"&y="+punto.getY(), function(data){
+			$.getJSON("http://ws.usig.buenosaires.gob.ar/geocoder/2.2/reversegeocoding?x="+punto.getX()+"&y="+punto.getY(), function(data){
 				data = String(data).replace('(','');
 				data = String(data).replace(')','');
 				orig = JSON.parse(data);							
@@ -32,10 +32,10 @@ var UsigLite = (function() {
 		},
 		//convierte un punto de lat y long en un punto de la usig
 		convertCoords: function(punto, callback){
-			$.get("http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x="+punto.longitud+"&y="+punto.latitud+"&output=lonlat", function(data){
+			$.getJSON("http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x="+punto.longitud+"&y="+punto.latitud+"&output=lonlat", function(data){
 				if(typeof(callback) == typeof(Function)){
 					try{
-						var p = new usig.Punto(data.resultado.x, data.resultado.x);
+						var p = new usig.Punto(data.resultado.x, data.resultado.y);
 						callback(null,p);
 					}catch(err){
 						callback(err,null);
