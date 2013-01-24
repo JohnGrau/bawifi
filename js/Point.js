@@ -8,8 +8,8 @@ var Point = (function(lat,lon,glat,glon){
 		gkba_latitud: _gkba_latitud,
 		gkba_longitud: _gkba_longitud,
 		setGKBAPoint:function(p){
-			_gkba_latitud = p.getY();
-			_gkba_longitud = p.getX();
+			this.gkba_latitud = p.getY();
+			this.gkba_longitud = p.getX();
 		}
 	}
 });

@@ -1,7 +1,7 @@
 var UsigLite = (function() {
 	return {
 		//obtiene un recorrido en base a dos puntos usig
-		getRecorrido: function(origen,destino,callback){ 
+		getTrip: function(origen,destino,callback){ 
 			usig.Recorridos.buscarRecorridos(origen, destino, function(opciones) {
 				//tomo la primer opcion del recorrido
 				var recorrido = opciones[0];
@@ -35,6 +35,9 @@ var UsigLite = (function() {
 			$.getJSON("http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x="+punto.longitud+"&y="+punto.latitud+"&output=lonlat", function(data){
 				if(typeof(callback) == typeof(Function)){
 					try{
+						if(data.tipo_resultado === "error"){
+							throw {"message":"Error al convertir las coordenadas. Puede ser que se encuentre fuera de la Ciudad Autónoma de Buenos Aires"};
+						}
 						var p = new usig.Punto(data.resultado.x, data.resultado.y);
 						callback(null,p);
 					}catch(err){

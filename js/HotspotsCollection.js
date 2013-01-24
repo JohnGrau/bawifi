@@ -44,7 +44,7 @@ var HotspotsCollection = (function(global, hotspots){
 			$hp.html(buffer);
 			$hp.listview("refresh");
 		},
-		addHotspotsToList: function(name,list_id){
+		addHotspots: function(name,list_id){
 			var l = hotspots.length
 				, buffer = ""
 				,	$hp = $("#"+list_id)

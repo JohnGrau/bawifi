@@ -18,7 +18,9 @@ var App = (function(global, hotspots){
 		//mostrar algo que indique que todavia no se localizo
 	  log("error en geolocalizar");
 	};
-
+	var clearMenu = function(){
+		$("div[data-role=navbar] li a").removeClass("ui-btn-active ui-state-persist");					
+	}
 	return {
 		init: function(){
 			var that = this;
@@ -35,20 +37,25 @@ var App = (function(global, hotspots){
 			$.when(jqmReady, pgReady).then(function () {
 				
 			 	HotspotsCollection.addGroups("comunas");
-			 	$("#categorias li").on('tap',function(e){
-			 		
+			 	$(".sorted-by-comuna-btn").addClass("ui-btn-active ui-state-persist");
+			 	$("#categorias li a").on('tap',function(e){
+			 		$this = $(this);
+			 		log($this.jqmData("key"));
 			 	});
 				$(".sorted-by-cerca-btn").on('tap', function(e){
+					clearMenu();
 					//HotspotsCollection.addGroups("");
-					//HotspotsCollection.addHotspotsToList("Distance","hotspots");
+					//HotspotsCollection.addHotspots("Distance","hotspots");
 				});
-				$(".sorted-by-comuna-btn").on('tap', function(e){
+				$(".sorted-by-comuna-btn").on('tap', function(e){		
+					clearMenu();
 					HotspotsCollection.addGroups("comunas");
-					//HotspotsCollection.addHotspotsToList("Comuna","hotspots");
+					//HotspotsCollection.addHotspots("Comuna","hotspots");
 				});
-				$(".sorted-by-tipo-btn").on('tap', function(e){
+				$(".sorted-by-tipo-btn").on('tap', function(e){			
+					clearMenu();
 					HotspotsCollection.addGroups("tipos");
-					//HotspotsCollection.addHotspotsToList("Categoria","hotspots");
+					//HotspotsCollection.addHotspots("Categoria","hotspots");
 				});							
 			});
 		}
