@@ -9,6 +9,14 @@
 	<link rel="stylesheet" href="css/styles.css" />
 	<script src="data/data.js"></script>
 	<script src="js/vendor/jquery-1.8.2.min.js"></script>
+  <script>
+    $(document).bind("mobileinit", function(){
+      $.extend(  $.mobile , {
+        defaultPageTransition: 'none',
+      	defaultDialogTransition: 'none'
+      });
+    });
+  </script>			
 	<script src="js/vendor/jquery.mobile-1.2.0.min.js"></script>
 	<script src="js/vendor/cordova-2.3.0.js" type="text/javascript"></script>
 	<script src="js/vendor/iscroll.js" type="text/javascript"></script>
@@ -22,69 +30,69 @@
 	<script src="js/index.js" type="text/javascript"></script>
 </head> 
 <body> 
-
-    <!-- LISTA CATEGORIA-->
-    <div data-role="page" id="categorias-page">
-      <div data-role="header" data-position="fixed" id="categorias-header" data-id="header">
+    <!-- COMUNAS-->
+    <div data-role="page" id="comunas-page">
+      <div data-role="header" data-position="fixed" id="comunas-header" data-id="header">
         <h1>BA Wifi</h1>
       </div>
-      <div data-role="content" id="categorias-content" data-iscroll>
-				<ul id="categorias" data-role="listview" data-filter="true">
+      <div data-role="content" id="comunas-content" data-iscroll>
+				<ul id="comunas" data-role="listview" data-filter="true">
 				</ul>
       </div>
-      <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="footer-nav">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#categorias-page" class="sorted-by-tipo-btn">Por tipo</a></li>
-						<li><a href="#hotspots-page" class="sorted-by-cerca-btn">Cerca de mi</a></li>
-						<li><a href="#categorias-page" class="sorted-by-comuna-btn">Por comuna</a></li>
-					</ul>
-				</div><!-- /navbar -->
+	      <div data-role="footer" data-position="fixed" data-id="footer-nav">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#tipos-page" data-icon="home" data-iconpos="top" class="sorted-by-tipo-btn">Categor&iacute;as</a></li>
+                    <li><a href="#cerca-page" data-icon="info" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
+                    <li><a href="#comunas-page" data-icon="gear" data-iconpos="top" class="ui-btn-active ui-state-persist sorted-by-comuna-btn">Comunas</a></li>
+                </ul>
+            </div><!-- /navbar -->
+	      </div>
+    </div>
+    <!-- FIN COMUNAS-->
+    <!-- LISTA CATEGORIA-->
+    <div data-role="page" id="tipos-page">
+      <div data-role="header" data-position="fixed" id="tipos-header" data-id="header">
+        <h1>BA Wifi</h1>
       </div>
+      <div data-role="content" id="tipos-content" data-iscroll>
+				<ul id="tipos" data-role="listview" data-filter="true">
+				</ul>
+      </div>
+	      <div data-role="footer" data-position="fixed" data-id="footer-nav">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#tipos-page" data-icon="home" data-iconpos="top" class="ui-btn-active ui-state-persist sorted-by-tipo-btn">Categor&iacute;as</a></li>
+                    <li><a href="#cerca-page" data-icon="info" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
+                    <li><a href="#comunas-page" data-icon="gear" data-iconpos="top" class="sorted-by-comuna-btn">Comunas</a></li>
+                </ul>
+            </div><!-- /navbar -->
+	      </div>
     </div>
     <!-- END LISTA CATEGORIAS -->
 
-		<!-- LISTA HOTSPOTS-->
-    <div data-role="page" id="hotspots-page">
-      <div data-role="header" data-position="fixed" id="hotspots-header" data-id="header">
+		<!-- LISTA CERCA-->
+    <div data-role="page" id="cerca-page">
+      <div data-role="header" data-position="fixed" id="cerca-header" data-id="header">
         <h1>BA Wifi</h1>
       </div>
-      <div data-role="content" id="hotspots-content" data-iscroll>
-				<ul id="hotspots" data-role="listview" data-filter="true">
+      <div data-role="content" id="cerca-content" data-iscroll>
+				<ul id="cerca" data-role="listview" data-filter="true">
 				</ul>
       </div>
-      <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="footer-nav">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#categorias-page" class="sorted-by-tipo-btn">Por tipo</a></li>
-						<li><a href="#hotspots-page" class="sorted-by-cerca-btn">Cerca de mi</a></li>
-						<li><a href="#categorias-page" class="sorted-by-comuna-btn">Por comuna</a></li>
-					</ul>
-				</div><!-- /navbar -->
-      </div>
+	      <div data-role="footer" data-position="fixed" data-id="footer-nav">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#tipos-page" data-icon="home" data-iconpos="top" class="sorted-by-tipo-btn">Categor&iacute;as</a></li>
+                    <li><a href="#cerca-page" data-icon="info" data-iconpos="top" class="ui-btn-active ui-state-persist sorted-by-cerca-btn">Cerca</a></li>
+                    <li><a href="#comunas-page" data-icon="gear" data-iconpos="top" class="sorted-by-comunas-btn">Comunas</a></li>
+                </ul>
+            </div><!-- /navbar -->
+	      </div>
     </div>
-    <!-- END HOTSPOTS-->
+    <!-- END CERCA-->
 
-    <!-- RECORRIDOS-->
-    <div data-role="page" id="recorridos-page">
-      <div data-role="header" data-position="fixed" id="recorridos-header" data-id="header">
-        <h1>BA Wifi</h1>
-      </div>
-      <div data-role="content" id="recorridos-content" data-iscroll>
-				<ul id="recorrido" data-role="listview" data-filter="true">
-				</ul>
-      </div>
-      <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="footer-nav">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#categorias-page" class="sorted-by-tipo-btn">Por tipo</a></li>
-						<li><a href="#hotspots-page" class="sorted-by-cerca-btn">Cerca de mi</a></li>
-						<li><a href="#categorias-page" class="sorted-by-comuna-btn">Por comuna</a></li>
-					</ul>
-				</div><!-- /navbar -->
-      </div>
-    </div>
-    <!-- FIN RECORRIDOS-->
+
      
 </body>
 </html>

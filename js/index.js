@@ -29,23 +29,24 @@ var App = (function(global, hotspots){
 				navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });	
 				pgReady.resolve();
 			}, false);
-			
 			//phonegap listo y jquery mobile listo
-			$.when(jqmReady, pgReady).then(function () {
+			$.when(jqmReady, pgReady).then(function () {				
+
 			 	HotspotsCollection.addGroups("comunas");
-			 	$("#categorias li a").on('taphold',function(e){
+
+			 	$("#categorias li a").on('tap',function(e){
 			 		$this = $(this);
 			 		log($this.jqmData("key"));
 			 	});
-				$(".sorted-by-cerca-btn").on('taphold', function(e){
-					//HotspotsCollection.addGroups("");
+				$(".sorted-by-cerca-btn").on('tap', function(e){
+					HotspotsCollection.addCerca("cerca");
 					//HotspotsCollection.addHotspots("Distance","hotspots");
 				});
-				$(".sorted-by-comuna-btn").on('taphold', function(e){		
+				$(".sorted-by-comuna-btn").on('tap', function(e){		
 					HotspotsCollection.addGroups("comunas");
 					//HotspotsCollection.addHotspots("Comuna","hotspots");
 				});
-				$(".sorted-by-tipo-btn").on('taphold', function(e){		
+				$(".sorted-by-tipo-btn").on('tap', function(e){		
 					HotspotsCollection.addGroups("tipos");
 					//HotspotsCollection.addHotspots("Categoria","hotspots");
 				});							

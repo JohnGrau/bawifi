@@ -3,7 +3,20 @@ var HotspotsCollection = (function(global, hotspots){
 	var hotspotsByComuna = [];
 	var hotspotsByCategoria = [];
 	var hotspotsByCerca = [];
-	
+	var nextPage = null;
+
+	var refreshList = function(name, list, content){
+			try{
+				list.html(content);
+				list.listview("refresh");
+			}catch(err){
+				$('#' + name + '-page').on('pageinit', function(e){				
+					list.html(content);
+					list.listview("refresh");
+					$(this).off('pageinit');
+				});
+			}
+	};
 	this.sortByComuna = function(a, b){
 			var cmnaA = parseInt(a.nro_comuna);
 			var cmnaB = parseInt(b.nro_comuna);
@@ -33,16 +46,26 @@ var HotspotsCollection = (function(global, hotspots){
 			var items = window[name]
 				,	l = items.length
 				, buffer = ""
-				,	$hp = $("#categorias");
-
-			$hp.empty();
+				,	$list = $("#" + name);
+			$list.empty();
 			for(var key in items){
 				if(typeof items[key] !==typeof(Function)){
 					buffer += '<li><a data-role="button" data-icon="arrow-u" data-key="'+key+'"><h3>' +items[key]+ '</h3><p class="ui-li-desc"></p></a></li>';
 				}
 			}
-			$hp.html(buffer);
-			$hp.listview("refresh");
+			refreshList(name, $list, buffer);
+
+		},
+		addCerca: function(list_id){
+			var buffer = ""
+				,	$list = $("#"+list_id);
+
+			$list.empty();
+			hotspots.sort(that["sortByDistance"]);
+			for(var i = 0 ; i < 10 ; ++i){			
+				buffer += "<li><h3>" +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></li>";				
+			}
+			refreshList("cerca", $list, buffer);
 		},
 		addHotspots: function(name,list_id){
 			var l = hotspots.length
