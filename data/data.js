@@ -1,17 +1,5 @@
 var hotspots = [
     {
-        "aps": "APs",
-        "domicilio": "Direcci&#243;n Normalizada",
-        "gkba_lat": "",
-        "gkba_long": "",
-        "lat": "Lat",
-        "long": "Long",
-        "nombre": "Nombre",
-        "nro_comuna": "Comuna",
-        "tipo": "Sitio",
-        "tipo_normalizado": "sitio"
-    },
-    {
         "aps": "1",
         "domicilio": "DIAZ VELEZ AV. y MARECHAL, LEOPOLDO",
         "gkba_lat": "102286.75",
@@ -1280,7 +1268,6 @@ var tipos = {
     "hospitales_y_cesacs": "Hospitales y CESACs",
     "museos": "Museos",
     "otros_establecimientos": "Otros Establecimientos",
-    "sitio": "Sitio",
     "teatros": "Teatros"
 };
 var comunas = [
