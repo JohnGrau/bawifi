@@ -33,18 +33,20 @@
     <!-- COMUNAS-->
     <div data-role="page" id="comunas-page">
       <div data-role="header" data-position="fixed" id="comunas-header" data-id="header">
-        <h1>BA Wifi</h1>
+				<div class="center-wrapper">
+					<img src="img/logo.png" alt="Buenos Aires En todo estas vos" />
+				</div>
       </div>
       <div data-role="content" id="comunas-content" data-iscroll>
 				<ul id="comunas" data-role="listview" data-filter="true">
 				</ul>
       </div>
-	      <div data-role="footer" data-position="fixed" data-id="footer-nav">
+	      <div data-role="footer" data-position="fixed" data-id="footer-nav" id="footer-nav">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#tipos-page" data-icon="home" data-iconpos="top" class="sorted-by-tipo-btn">Categor&iacute;as</a></li>
-                    <li><a href="#cerca-page" data-icon="info" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
-                    <li><a href="#comunas-page" data-icon="gear" data-iconpos="top" class="ui-btn-active ui-state-persist sorted-by-comuna-btn">Comunas</a></li>
+                    <li><a href="#tipos-page" data-icon="tipo" data-iconpos="top" class="sorted-by-tipo-btn">Categor&iacute;as</a></li>
+                    <li><a href="#cerca-page" data-icon="cerca" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
+                    <li><a href="#comunas-page" data-icon="comuna" data-iconpos="top" class="ui-btn-active ui-state-persist sorted-by-comuna-btn">Comunas</a></li>
                 </ul>
             </div><!-- /navbar -->
 	      </div>
@@ -53,18 +55,20 @@
     <!-- LISTA CATEGORIA-->
     <div data-role="page" id="tipos-page">
       <div data-role="header" data-position="fixed" id="tipos-header" data-id="header">
-        <h1>BA Wifi</h1>
+				<div class="center-wrapper">
+					<img src="img/logo.png" alt="Buenos Aires En todo estas vos" />
+				</div>
       </div>
       <div data-role="content" id="tipos-content" data-iscroll>
 				<ul id="tipos" data-role="listview" data-filter="true">
 				</ul>
       </div>
-	      <div data-role="footer" data-position="fixed" data-id="footer-nav">
+	      <div data-role="footer" data-position="fixed" data-id="footer-nav" id="footer-nav">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#tipos-page" data-icon="home" data-iconpos="top" class="ui-btn-active ui-state-persist sorted-by-tipo-btn">Categor&iacute;as</a></li>
-                    <li><a href="#cerca-page" data-icon="info" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
-                    <li><a href="#comunas-page" data-icon="gear" data-iconpos="top" class="sorted-by-comuna-btn">Comunas</a></li>
+                    <li><a href="#tipos-page" data-icon="tipo" data-iconpos="top" class="ui-btn-active ui-state-persist sorted-by-tipo-btn">Categor&iacute;as</a></li>
+                    <li><a href="#cerca-page" data-icon="cerca" data-iconpos="top" class="sorted-by-cerca-btn">Cerca</a></li>
+                    <li><a href="#comunas-page" data-icon="comuna" data-iconpos="top" class="sorted-by-comuna-btn">Comunas</a></li>
                 </ul>
             </div><!-- /navbar -->
 	      </div>
@@ -74,24 +78,43 @@
 		<!-- LISTA CERCA-->
     <div data-role="page" id="cerca-page">
       <div data-role="header" data-position="fixed" id="cerca-header" data-id="header">
-        <h1>BA Wifi</h1>
+				<div class="center-wrapper">
+					<img src="img/logo.png" alt="Buenos Aires En todo estas vos" />
+				</div>
       </div>
       <div data-role="content" id="cerca-content" data-iscroll>
 				<ul id="cerca" data-role="listview" data-filter="true">
 				</ul>
       </div>
-	      <div data-role="footer" data-position="fixed" data-id="footer-nav">
+	      <div data-role="footer" data-position="fixed" data-id="footer-nav" id="footer-nav">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#tipos-page" data-icon="home" data-iconpos="top" class="sorted-by-tipo-btn">Categor&iacute;as</a></li>
-                    <li><a href="#cerca-page" data-icon="info" data-iconpos="top" class="ui-btn-active ui-state-persist sorted-by-cerca-btn">Cerca</a></li>
-                    <li><a href="#comunas-page" data-icon="gear" data-iconpos="top" class="sorted-by-comunas-btn">Comunas</a></li>
+                    <li><a href="#tipos-page" data-icon="tipo" data-iconpos="top" class="sorted-by-tipo-btn">Categor&iacute;as</a></li>
+                    <li><a href="#cerca-page" data-icon="cerca" data-iconpos="top" class="ui-btn-active ui-state-persist sorted-by-cerca-btn">Cerca</a></li>
+                    <li><a href="#comunas-page" data-icon="comuna" data-iconpos="top" class="sorted-by-comunas-btn">Comunas</a></li>
                 </ul>
             </div><!-- /navbar -->
 	      </div>
     </div>
     <!-- END CERCA-->
 
+
+		<!-- LISTA HOTSPOTS-->
+    <div data-role="page" id="hotspots-page">
+      <div data-role="header" data-position="fixed" id="hotspots-header" data-id="header">
+				<div class="center-wrapper">
+					<img src="img/logo.png" alt="Buenos Aires En todo estas vos" />
+				</div>
+      </div>
+      <div data-role="content" id="cerca-content" data-iscroll>
+				<ul id="hotspots" data-role="listview" data-filter="true">
+				</ul>
+      </div>
+      <div data-role="footer" data-position="fixed" data-id="hotspots-nav" class="ui-bar">
+        <a data-rel="back" data-role="button" data-icon="arrow-l">Volver</a>
+      </div>
+    </div>
+    <!-- END HOTSPOTS-->    
 
      
 </body>

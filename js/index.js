@@ -31,24 +31,15 @@ var App = (function(global, hotspots){
 			}, false);
 			//phonegap listo y jquery mobile listo
 			$.when(jqmReady, pgReady).then(function () {				
-
 			 	HotspotsCollection.addGroups("comunas");
-
-			 	$("#categorias li a").on('tap',function(e){
-			 		$this = $(this);
-			 		log($this.jqmData("key"));
-			 	});
 				$(".sorted-by-cerca-btn").on('tap', function(e){
 					HotspotsCollection.addCerca("cerca");
-					//HotspotsCollection.addHotspots("Distance","hotspots");
 				});
 				$(".sorted-by-comuna-btn").on('tap', function(e){		
 					HotspotsCollection.addGroups("comunas");
-					//HotspotsCollection.addHotspots("Comuna","hotspots");
 				});
 				$(".sorted-by-tipo-btn").on('tap', function(e){		
 					HotspotsCollection.addGroups("tipos");
-					//HotspotsCollection.addHotspots("Categoria","hotspots");
 				});							
 			});
 		}

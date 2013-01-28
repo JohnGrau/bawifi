@@ -1270,20 +1270,20 @@ var tipos = {
     "otros_establecimientos": "Otros Establecimientos",
     "teatros": "Teatros"
 };
-var comunas = [
-    "Comuna 1",
-    "Comuna 2",
-    "Comuna 3",
-    "Comuna 4",
-    "Comuna 5",
-    "Comuna 6",
-    "Comuna 7",
-    "Comuna 8",
-    "Comuna 9",
-    "Comuna 10",
-    "Comuna 11",
-    "Comuna 12",
-    "Comuna 13",
-    "Comuna 14",
-    "Comuna 15"
-];
+var comunas = {
+    "Comuna 1":"Retiro, San Nicol&aacute;s, Puerto Madero, San Telmo, Montserrat y Constituci&ocute;n.",
+    "Comuna 2":"Recoleta",
+    "Comuna 3":"Balvanera y San Crist&oacute;bal",
+    "Comuna 4":"La Boca, Barracas, Parque Patricios, y Nueva Pompeya",
+    "Comuna 5":"Almagro y Boedo",
+    "Comuna 6":"Caballito",
+    "Comuna 7":"Flores y Parque Chacabuco",
+    "Comuna 8":"Villa Soldati, Villa Riachuelo y Villa Lugano",
+    "Comuna 9":"Liniers, Mataderos y Parque Avellaneda",
+    "Comuna 10":"Villa Real, Monte Castro, Versalles, Floresta, Vélez Sarsfield y Villa Luro",
+    "Comuna 11":"Villa General Mitre, Villa Devoto, Villa del Parque y Villa Santa Rita",
+    "Comuna 12":"Coghlan, Saavedra, Villa Urquiza y Villa Pueyrred&oacute;n",
+    "Comuna 13":"N&uacute;&ntilde;ez, Belgrano y Colegiales",
+    "Comuna 14":"Palermo",
+    "Comuna 15":"Chacarita, Villa Crespo, La Paternal, Villa Ort&uacute;zar, Agronom&iacute;a y Parque Chas"
+};
