@@ -14,12 +14,10 @@ li{
 	-webkit-transform: translateZ(0) !important;
 }
 @media only screen and (max-height: 280px){
-
     .ui-header .ui-btn {
         display: none !important;
     }
 }
-
 @media DISABLED {
     .iscroll-scroller,
     .iscroll-scroller * {
@@ -31,36 +29,21 @@ li{
         -webkit-transform: translateZ(0) !important;
     }
 }
-
-.center-wrapper {
-    text-align: center;
-}
-.center-wrapper * {
-    margin: 0 auto;
-    margin-top: 9px;
-    margin-bottom: 2px;
-}
-.iscroll-content .ui-listview li.ui-btn-up-f
-{
+.iscroll-content .ui-listview li.ui-btn-up-f{
     background-image: none !important;
     text-shadow: none !important;
 }
 
-.iscroll-content .ui-listview li.ui-btn-hover-f
-{
+.iscroll-content .ui-listview li.ui-btn-hover-f{
     background-image: none !important;
     text-shadow: none !important;
 }
-
-.iscroll-content .ui-listview li.ui-btn-down-f
-{
+.iscroll-content .ui-listview li.ui-btn-down-f{
     background-image: none !important;
     text-shadow: none !important;
 }
-
 /* Remove background image from non-button scroller content */
-.iscroll-content .ui-body-c
-{
+.iscroll-content .ui-body-c{
     background-image: none !important;
 }
 #footer-nav .ui-btn .ui-icon {
@@ -73,9 +56,11 @@ li{
     -webkit-border-radius: 0 !important;
     border-radius: 0 !important;
 }
+/*cambio el temano del texto para que se vea segun el active*/
 #footer-nav .ui-btn-text{
     font-size: 0.8em;
 }
+/*cambio el active para que se vea segun diseno*/
 #footer-nav .ui-btn-active{
     border:1px solid #000;
     background:#222;
@@ -89,16 +74,28 @@ li{
     background-image:-o-linear-gradient( #202020,#2c2c2c );
     background-image:linear-gradient( #202020,#2c2c2c )
 }
+/*icono footer tipo*/
 .ui-icon-tipo{
     background: url('/img/btn_tipo_off.png') 50% 50% no-repeat;
 }
+/*icono footer cerca*/
 .ui-icon-cerca{
     background: url('/img/btn_cerca_off.png') 50% 50% no-repeat;
 }
+/*icono footer comuna*/
 .ui-icon-comuna{
     background: url('/img/btn_comuna_off.png') 50% 50% no-repeat;
 }
-
+/*centrado de la imagen del header*/
+.center-wrapper {
+    text-align: center;
+}
+.center-wrapper * {
+    margin: 0 auto;
+    margin-top: 9px;
+    margin-bottom: 2px;
+}
+/*barra del header*/
 .ui-header{
     border-bottom: 1px solid #e8b700;
     background: #ffdc1f !important; /* Old browsers */
@@ -126,4 +123,8 @@ li{
     background: -ms-linear-gradient(top, #ffdc1f 0%,#ffd635 52%,#ffcf00 55%,#fec700 100%) !important; /* IE10+ */
     background: linear-gradient(to bottom, #ffdc1f 0%,#ffd635 52%,#ffcf00 55%,#fec700 100%) !important; /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdc1f', endColorstr='#fec700',GradientType=0 ) !important; /* IE6-9 */        
+}
+#recorridos li h3{
+    white-space:normal;
+    font-size: 0.7em !important;
 }

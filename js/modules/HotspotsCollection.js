@@ -3,7 +3,6 @@ var HotspotsCollection = (function(global, hotspots){
 	var hotspotsByComuna = [];
 	var hotspotsByCategoria = [];
 	var hotspotsByCerca = [];
-	var nextPage = null;
 
 	var refreshList = function(name, list, content){
 		try{
@@ -22,17 +21,19 @@ var HotspotsCollection = (function(global, hotspots){
 	var addListeners = function(name){
 		$("#"+name+" li a").on('tap',function(e){
 	 		var $this = $(this);
-	 		var filter = $this.jqmData("key");
-	 		HotspotsCollection.addHotspots(name,filter);
+	 		if(!$this.hasClass('hotspot')){
+		 		var filter = $this.jqmData("key");
+		 		HotspotsCollection.addHotspots(name,filter);	 			
+	 		}else{
+	 			var gkba_lat = $this.attr("data-gkbalat");
+	 			var gkba_long = $this.attr("data-gkbalong");
+	 			var p = new usig.Punto(gkba_long,gkba_lat);
+	 			$(document).trigger("gettrip", [p]);
+	 		}
  		});
 	};
 	var removeListeners = function(name){
 		$("#"+name+" li a").off();
-	};
-	this.sortByComuna = function(a, b){
-		var cmnaA = parseInt(a.nro_comuna);
-		var cmnaB = parseInt(b.nro_comuna);
-	  return ((cmnaA < cmnaB) ? -1 : ((cmnaA > cmnaB) ? 1 : 0));
 	};
 	this.sortByDistance = function(a, b){
 		var cmnaA = parseFloat(a.distancia);
@@ -76,9 +77,25 @@ var HotspotsCollection = (function(global, hotspots){
 			$list.empty();
 			hotspots.sort(that["sortByDistance"]);
 			for(var i = 0 ; i < 10 ; ++i){			
-				buffer += "<li><h3>" +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></li>";				
+				var gkba_lat = hotspots[i]["gkba_lat"];
+				var gkba_long = hotspots[i]["gkba_long"];
+				buffer += '<li><a data-gkbalat="'+gkba_lat+'" data-gkbalong="'+gkba_long+'" data-role="button" class="hotspot" data-icon="arrow-u"><h3>' +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></a></li>";	
 			}
 			refreshList("cerca", $list, buffer);
+		},
+		addTrip:function(recorrido){
+			var buffer = ""
+				,	$list = $("#recorridos")
+				,	detalle = recorrido.detalle;
+
+			$list.empty();
+			for(var key in detalle){	
+				if(typeof detalle[key] !==typeof(Function)){
+					var title = detalle[key].text;
+					buffer += '<li><h3>' +title+ '</h3><p class="ui-li-desc"></p></li>';
+				}
+			}
+			refreshList("recorridos", $list, buffer);
 		},
 		addHotspots: function(name, filter){
 			$.mobile.changePage('#hotspots-page');
@@ -89,17 +106,19 @@ var HotspotsCollection = (function(global, hotspots){
 				, key;
 
 			$list.empty();
-			//hotspots.sort(that["sortBy" + name]);
+			hotspots.sort(that.sortByDistance);
 			for(var i = 0 ; i < l ; ++i){		
+				var gkba_lat = hotspots[i]["gkba_lat"];
+				var gkba_long = hotspots[i]["gkba_long"];				
 				if(name === 'comunas'){
 					key = "Comuna " + hotspots[i]["nro_comuna"];
 					if(filter === key){
-						buffer += "<li><h3>" +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></li>";	
+						buffer += '<li><a data-gkbalat="'+gkba_lat+'" data-gkbalong="'+gkba_long+'" data-role="button" class="hotspot" data-icon="arrow-u"><h3>' +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></a></li>";	
 					}
 				}else if(name === 'tipos'){
 					key = hotspots[i]["tipo_normalizado"];
 					if(filter === key){
-						buffer += "<li><h3>" +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></li>";	
+						buffer += '<li><a data-gkbalat="'+gkba_lat+'" data-gkbalong="'+gkba_long+'" data-role="button" class="hotspot" data-icon="arrow-u"><h3>' +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></a></li>";	
 					}
 				}							
 			}

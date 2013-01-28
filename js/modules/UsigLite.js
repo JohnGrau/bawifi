@@ -3,17 +3,24 @@ var UsigLite = (function() {
 		//obtiene un recorrido en base a dos puntos usig
 		getTrip: function(origen,destino,callback){ 
 			usig.Recorridos.buscarRecorridos(origen, destino, function(opciones) {
+				var recorrido;
 				//tomo la primer opcion del recorrido
-				var recorrido = opciones[0];
-				recorrido.getDetalle(function(detalle){       
-					if(typeof(callback) == typeof(Function)){
-						try{
-							callback(null, {"tiempo":recorrido.getTime(),"detalle": detalle});   
-						}catch(err){
-							callback(err,null);
-						}	
-					}									
-				});
+				try{
+					recorrido = opciones[0];
+					recorrido.getDetalle(function(detalle){       
+						if(typeof(callback) == typeof(Function)){
+							try{
+								callback(null, {"tiempo":recorrido.getTime(),"detalle": detalle});   
+							}catch(err){
+								log("paso por el catch");
+								callback(err,null);
+							}	
+						}									
+					});					
+				}catch(err){
+					callback(err,null)
+				}
+
 			});  
 		},
 		reverseGeocoder: function(punto, callback){
@@ -32,7 +39,7 @@ var UsigLite = (function() {
 		},
 		//convierte un punto de lat y long en un punto de la usig
 		convertCoords: function(punto, callback){
-			$.getJSON("http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x="+punto.longitud+"&y="+punto.latitud+"&output=lonlat", function(data){
+			$.getJSON("http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x="+punto.longitud+"&y="+punto.latitud+"&output=gkba", function(data){
 				if(typeof(callback) == typeof(Function)){
 					try{
 						if(data.tipo_resultado === "error"){

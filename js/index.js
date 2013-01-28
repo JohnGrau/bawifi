@@ -20,17 +20,38 @@ var App = (function(global, hotspots){
 	};
 	return {
 		init: function(){
-			var that = this;
+			var that = this
+				,	$document = $(document);
 			$.mobile.listview.prototype.options.filterPlaceholder = "Buscar wifi...";
 			$.mobile.allowCrossDomainPages = true;
-
-			$(document).on("pageinit", jqmReady.resolve);
+			$document.on("pageinit", function(){
+				jqmReady.resolve();
+			});
+			$document.on('pagebeforeshow',function(){
+				$(".ui-header").on('tap', function(e){
+					//fix this
+					$('#hotspots-content,#comunas-content,#recorridos-content,#tipos-content,#cerca-content').iscrollview("scrollTo", 0, 0, 500);
+				});
+			});
 			document.addEventListener("deviceready", function(){
 				navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });	
 				pgReady.resolve();
 			}, false);
+			$document.on("gettrip", function(e,destino){
+				console.log("gettrip");
+				var origen = new usig.Punto(whereami.gkba_longitud, whereami.gkba_latitud);
+				UsigLite.getTrip(origen, destino, function(error,recorrido){
+					if(!error){
+						HotspotsCollection.addTrip(recorrido);
+						$.mobile.changePage('#recorridos-page');
+					}else{
+						log(error);
+					}
+				});
+			});
 			//phonegap listo y jquery mobile listo
 			$.when(jqmReady, pgReady).then(function () {				
+
 			 	HotspotsCollection.addGroups("comunas");
 				$(".sorted-by-cerca-btn").on('tap', function(e){
 					HotspotsCollection.addCerca("cerca");
