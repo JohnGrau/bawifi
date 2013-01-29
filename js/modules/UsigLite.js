@@ -3,14 +3,16 @@ var UsigLite = (function() {
 		//obtiene un recorrido en base a dos puntos usig
 		getTrip: function(origen,destino,callback){ 
 			usig.Recorridos.buscarRecorridos(origen, destino, function(opciones) {
-				var recorrido;
+				var recorrido
+					,	tipo;
 				//tomo la primer opcion del recorrido
 				try{
 					recorrido = opciones[0];
+					tipo = recorrido.getTipo();
 					recorrido.getDetalle(function(detalle){       
 						if(typeof(callback) == typeof(Function)){
 							try{
-								callback(null, {"tiempo":recorrido.getTime(),"detalle": detalle});   
+								callback(null, {"tiempo":recorrido.getTime(),"detalle": detalle, "tipo":tipo});   
 							}catch(err){
 								log("paso por el catch");
 								callback(err,null);

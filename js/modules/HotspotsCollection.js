@@ -3,7 +3,7 @@ var HotspotsCollection = (function(global, hotspots){
 	var hotspotsByComuna = [];
 	var hotspotsByCategoria = [];
 	var hotspotsByCerca = [];
-
+	var trip_types = {"walk":"A pie", "transporte_publico": "Transporte Público", "Car": "En auto"}
 	var refreshList = function(name, list, content){
 		try{
 			list.html(content);
@@ -75,7 +75,7 @@ var HotspotsCollection = (function(global, hotspots){
 				,	$list = $("#"+list_id);
 
 			$list.empty();
-			hotspots.sort(that["sortByDistance"]);
+			hotspots.sort(that.sortByDistance);
 			for(var i = 0 ; i < 10 ; ++i){			
 				var gkba_lat = hotspots[i]["gkba_lat"];
 				var gkba_long = hotspots[i]["gkba_long"];
@@ -89,6 +89,7 @@ var HotspotsCollection = (function(global, hotspots){
 				,	detalle = recorrido.detalle;
 
 			$list.empty();
+			buffer += '<li data-role="list-divider"><h3>Tiempo Estimado: ' +recorrido.tiempo+ ' Minutos | '+trip_types[recorrido.tipo]+' </h3></li>';
 			for(var key in detalle){	
 				if(typeof detalle[key] !==typeof(Function)){
 					var title = detalle[key].text;

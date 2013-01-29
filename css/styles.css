@@ -8,7 +8,7 @@ body {
     -moz-user-select: none !important;
     user-select: none !important;
 }
-li{
+.ui-btn-up-c, .ui-btn-hover-c, .ui-btn-down-c, .ui-li-static{
 	background:#ffffff !important;
 	text-shadow:none !important;
 	-webkit-transform: translateZ(0) !important;
@@ -124,7 +124,20 @@ li{
     background: linear-gradient(to bottom, #ffdc1f 0%,#ffd635 52%,#ffcf00 55%,#fec700 100%) !important; /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdc1f', endColorstr='#fec700',GradientType=0 ) !important; /* IE6-9 */        
 }
+
 #recorridos li h3{
     white-space:normal;
     font-size: 0.7em !important;
+}
+/*transformo la descripciones de las listas en mayusculas*/
+.ui-li-desc{
+    text-transform:uppercase !important;
+}
+/*transformo a mayusculas las encabezados de los dividers*/
+.ui-li-divider h3{
+    text-transform:uppercase !important;
+}
+
+.ui-li-divider{
+    background-color: #333 !important;
 }

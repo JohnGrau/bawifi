@@ -40,6 +40,12 @@ var App = (function(global, hotspots){
 			$document.on("gettrip", function(e,destino){
 				console.log("gettrip");
 				var origen = new usig.Punto(whereami.gkba_longitud, whereami.gkba_latitud);
+				$.mobile.loading( 'show', {
+					text: 'Cargando recorrido',
+					textVisible: true,
+					theme: 'a',
+					html: ""
+				});				
 				UsigLite.getTrip(origen, destino, function(error,recorrido){
 					if(!error){
 						HotspotsCollection.addTrip(recorrido);
@@ -47,6 +53,7 @@ var App = (function(global, hotspots){
 					}else{
 						log(error);
 					}
+					$.mobile.loading( 'hide');
 				});
 			});
 			//phonegap listo y jquery mobile listo
