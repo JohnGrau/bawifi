@@ -1,9 +1,10 @@
 
 var App = (function(global, hotspots){
-	var whereami;
 	var jqmReady = $.Deferred(),
 	    pgReady = $.Deferred(),
-	    gcReady = $.Deferred();
+	    gcReady = $.Deferred(),
+	    mapaReady = $.Deferred(),
+	    whereami, currentDest;
 
 	var onSuccess = function(position) {
 		//grabo la geolocalizacion
@@ -28,6 +29,7 @@ var App = (function(global, hotspots){
 				jqmReady.resolve();
 			});
 			$document.on('pagebeforeshow',function(){
+				console.log(currentDest);
 				$(".ui-header").on('tap', function(e){
 					//fix this
 					$('#hotspots-content,#comunas-content,#recorridos-content,#tipos-content,#cerca-content').iscrollview("scrollTo", 0, 0, 500);
@@ -37,9 +39,11 @@ var App = (function(global, hotspots){
 				navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });	
 				pgReady.resolve();
 			}, false);
-			$document.on("gettrip", function(e,destino){
-				console.log("gettrip");
+			$document.on("gettrip", function(e,dest){
 				var origen = new usig.Punto(whereami.gkba_longitud, whereami.gkba_latitud);
+				var destino = new usig.Punto(dest.gkba_longitud, dest.gkba_latitud);
+				//esta variable se comparte entre pantallas para que funcione el mapa
+				currentDest = dest;				
 				$.mobile.loading( 'show', {
 					text: 'Cargando recorrido',
 					textVisible: true,
@@ -57,8 +61,7 @@ var App = (function(global, hotspots){
 				});
 			});
 			//phonegap listo y jquery mobile listo
-			$.when(jqmReady, pgReady).then(function () {				
-
+			$.when(jqmReady, pgReady).then(function () {			
 			 	HotspotsCollection.addGroups("comunas");
 				$(".sorted-by-cerca-btn").on('tap', function(e){
 					HotspotsCollection.addCerca("cerca");
@@ -68,7 +71,7 @@ var App = (function(global, hotspots){
 				});
 				$(".sorted-by-tipo-btn").on('tap', function(e){		
 					HotspotsCollection.addGroups("tipos");
-				});							
+				});
 			});
 		}
 	}

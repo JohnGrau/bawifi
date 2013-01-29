@@ -27,7 +27,9 @@ var HotspotsCollection = (function(global, hotspots){
 	 		}else{
 	 			var gkba_lat = $this.attr("data-gkbalat");
 	 			var gkba_long = $this.attr("data-gkbalong");
-	 			var p = new usig.Punto(gkba_long,gkba_lat);
+	 			var latitud = $this.attr("data-latitud");
+	 			var longitud = $this.attr("data-longitud");	 			
+	 			var p = new Point(latitud,longitud,gkba_lat,gkba_long);
 	 			$(document).trigger("gettrip", [p]);
 	 		}
  		});
@@ -79,7 +81,9 @@ var HotspotsCollection = (function(global, hotspots){
 			for(var i = 0 ; i < 10 ; ++i){			
 				var gkba_lat = hotspots[i]["gkba_lat"];
 				var gkba_long = hotspots[i]["gkba_long"];
-				buffer += '<li><a data-gkbalat="'+gkba_lat+'" data-gkbalong="'+gkba_long+'" data-role="button" class="hotspot" data-icon="arrow-u"><h3>' +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></a></li>";	
+				var latitud = hotspots[i]["lat"];
+				var longitud = hotspots[i]["log"];
+				buffer += '<li><a data-longitud="'+longitud+'" data-latitud="'+latitud+'" data-gkbalat="'+gkba_lat+'" data-gkbalong="'+gkba_long+'" data-role="button" class="hotspot" data-icon="arrow-u"><h3>' +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></a></li>";	
 			}
 			refreshList("cerca", $list, buffer);
 		},

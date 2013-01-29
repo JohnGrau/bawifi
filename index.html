@@ -131,9 +131,26 @@
       </div>
       <div data-role="footer" data-position="fixed" data-id="recorridos-nav" class="ui-bar">
         <a data-rel="back" data-role="button" data-icon="arrow-l">Volver</a>
+        <a href="#mapa-page" data-role="button" data-icon="arrow-r"	data-iconpos="right" class="ui-btn-right" id="ver-mapa">Ver Mapa</a>
       </div>
     </div>
     <!-- END HOTSPOTS-->
+
+ 		<!-- MAPA-->
+    <div data-role="page" id="mapa-page">
+      <div data-role="header" data-position="fixed" id="mapa-header" data-id="header">
+				<div class="center-wrapper">
+					<img src="img/logo.png" alt="Buenos Aires En todo estas vos" />
+				</div>
+      </div>
+      <div data-role="content" id="mapa-content" data-iscroll>
+				<div id="map_canvas" style="width: 100%; height: 100%"></div>
+      </div>
+      <div data-role="footer" data-position="fixed" data-id="mapa-nav" class="ui-bar">
+        <a data-rel="back" data-role="button" data-icon="arrow-l">Volver</a>
+      </div>
+    </div>
+    <!-- END MAPA-->   
      
 </body>
 </html>
