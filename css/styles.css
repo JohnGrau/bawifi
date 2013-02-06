@@ -1,3 +1,4 @@
+html { height: 100% }
 body {
     overflow:hidden !important;
     -webkit-font-smoothing: subpixel-antialiased !important;
@@ -7,6 +8,9 @@ body {
     -ms-user-select: none !important;
     -moz-user-select: none !important;
     user-select: none !important;
+    height: 100%;
+    margin: 0; 
+    padding: 0;      
 }
 .ui-btn-up-c, .ui-btn-hover-c, .ui-btn-down-c, .ui-li-static{
 	background:#ffffff !important;
@@ -141,8 +145,8 @@ body {
 .ui-li-divider{
     background-color: #333 !important;
 }
-
 #map_canvas{
     z-index: 9000;
-    -webkit-transform: translate3d(0,0,0);
+    height: 88% !important;
 }
+

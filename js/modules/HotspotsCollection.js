@@ -20,18 +20,19 @@ var HotspotsCollection = (function(global, hotspots){
 	};
 	var addListeners = function(name){
 		$("#"+name+" li a").on('tap',function(e){
-			log("TAP LI A");
 	 		var $this = $(this);
 	 		if(!$this.hasClass('hotspot')){
 		 		var filter = $this.jqmData("key");
 		 		HotspotsCollection.addHotspots(name,filter);	 			
 	 		}else{
-	 			var gkba_lat = $this.attr("data-gkbalat");
-	 			var gkba_long = $this.attr("data-gkbalong");
-	 			var latitud = $this.attr("data-latitud");
-	 			var longitud = $this.attr("data-longitud");	 			
-	 			var p = new Point(latitud,longitud,gkba_lat,gkba_long);
-	 			$(document).trigger("gettrip", [p]);
+	 			var gkba_lat = $this.attr("data-gkbalat")
+	 				, gkba_long = $this.attr("data-gkbalong")
+	 				, latitud = $this.attr("data-latitud")
+	 				, longitud = $this.attr("data-longitud")
+	 				, nombre = $this.attr("data-nombre")
+	 				,	domicilio = $this.attr("data-domicilio")	
+	 				, p = new Point(latitud,longitud,gkba_lat,gkba_long);
+	 			$(document).trigger("gettrip", [p, nombre, domicilio]);
 	 		}
  		});
 	};
@@ -80,11 +81,13 @@ var HotspotsCollection = (function(global, hotspots){
 			$list.empty();
 			hotspots.sort(that.sortByDistance);
 			for(var i = 0 ; i < 10 ; ++i){			
-				var gkba_lat = hotspots[i]["gkba_lat"];
-				var gkba_long = hotspots[i]["gkba_long"];
-				var latitud = hotspots[i]["lat"];
-				var longitud = hotspots[i]["log"];
-				buffer += '<li><a data-longitud="'+longitud+'" data-latitud="'+latitud+'" data-gkbalat="'+gkba_lat+'" data-gkbalong="'+gkba_long+'" data-role="button" class="hotspot" data-icon="arrow-u"><h3>' +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></a></li>";	
+				var gkba_lat = hotspots[i]["gkba_lat"]
+					, gkba_long = hotspots[i]["gkba_long"]
+					, latitud = hotspots[i]["lat"]
+					, longitud = hotspots[i]["long"]
+					, nombre = hotspots[i]["nombre"]
+					, domicilio = hotspots[i]["domicilio"];
+				buffer += '<li><a data-longitud="' + longitud + '" data-latitud="' + latitud + '" data-gkbalat="' + gkba_lat + '" data-gkbalong="' + gkba_long + '" data-role="button" data-nombre="' + nombre + '" data-domicilio="' + domicilio + '" class="hotspot" data-icon="arrow-u"><h3>' + nombre + "</h3><p class='ui-li-desc'>" + domicilio + "</p></a></li>";	
 			}
 			refreshList("cerca", $list, buffer);
 		},
@@ -114,17 +117,21 @@ var HotspotsCollection = (function(global, hotspots){
 			$list.empty();
 			hotspots.sort(that.sortByDistance);
 			for(var i = 0 ; i < l ; ++i){		
-				var gkba_lat = hotspots[i]["gkba_lat"];
-				var gkba_long = hotspots[i]["gkba_long"];				
+				var gkba_lat = hotspots[i]["gkba_lat"]
+					, gkba_long = hotspots[i]["gkba_long"]
+					, latitud = hotspots[i]["lat"]
+					, longitud = hotspots[i]["long"]
+					, nombre = hotspots[i]["nombre"]
+					, domicilio = hotspots[i]["domicilio"];			
 				if(name === 'comunas'){
 					key = "Comuna " + hotspots[i]["nro_comuna"];
 					if(filter === key){
-						buffer += '<li><a data-gkbalat="'+gkba_lat+'" data-gkbalong="'+gkba_long+'" data-role="button" class="hotspot" data-icon="arrow-u"><h3>' +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></a></li>";	
+						buffer += '<li><a data-longitud="' + longitud + '" data-latitud="' + latitud + '" data-gkbalat="' + gkba_lat + '" data-gkbalong="' + gkba_long + '" data-role="button" data-nombre="' + nombre + '" data-domicilio="' + domicilio + '" class="hotspot" data-icon="arrow-u"><h3>' + nombre + "</h3><p class='ui-li-desc'>" + domicilio + "</p></a></li>";	
 					}
 				}else if(name === 'tipos'){
 					key = hotspots[i]["tipo_normalizado"];
 					if(filter === key){
-						buffer += '<li><a data-gkbalat="'+gkba_lat+'" data-gkbalong="'+gkba_long+'" data-role="button" class="hotspot" data-icon="arrow-u"><h3>' +hotspots[i]["nombre"]+ "</h3><p class='ui-li-desc'>" + hotspots[i]["domicilio"] + "</p></a></li>";	
+						buffer += '<li><a data-longitud="' + longitud + '" data-latitud="' + latitud + '" data-gkbalat="' + gkba_lat + '" data-gkbalong="' + gkba_long + '" data-role="button" data-nombre="' + nombre + '" data-domicilio="' + domicilio + '" class="hotspot" data-icon="arrow-u"><h3>' + nombre + "</h3><p class='ui-li-desc'>" + domicilio + "</p></a></li>";	
 					}
 				}							
 			}
