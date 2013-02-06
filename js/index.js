@@ -1,4 +1,3 @@
-
 var App = (function(global, hotspots){
 	var jqmReady = $.Deferred(),
 	    pgReady = $.Deferred(),
@@ -23,13 +22,11 @@ var App = (function(global, hotspots){
 		init: function(){
 			var that = this
 				,	$document = $(document);
+
 			$.mobile.listview.prototype.options.filterPlaceholder = "Buscar wifi...";
 			$.mobile.allowCrossDomainPages = true;
-			$document.on("pageinit", function(){
-				jqmReady.resolve();
-			});
+			$document.on("pageinit", jqmReady.resolve);
 			$document.on('pagebeforeshow',function(){
-				console.log(currentDest);
 				$(".ui-header").on('tap', function(e){
 					//fix this
 					$('#hotspots-content,#comunas-content,#recorridos-content,#tipos-content,#cerca-content').iscrollview("scrollTo", 0, 0, 500);
@@ -57,11 +54,28 @@ var App = (function(global, hotspots){
 					}else{
 						log(error);
 					}
-					$.mobile.loading( 'hide');
+					$.mobile.loading('hide');
 				});
 			});
 			//phonegap listo y jquery mobile listo
 			$.when(jqmReady, pgReady).then(function () {			
+				$("#mapa-page").on('pageinit', function(e){
+					$("#mapa-page").on('pageshow', function(e){
+			      function initialize() {
+			        var mapOptions = {
+			          center: new google.maps.LatLng(-34.397, 150.644),
+			          zoom: 8,
+			          mapTypeId: google.maps.MapTypeId.ROADMAP
+			        };
+			        var selectMap = document.getElementById("map_canvas");
+			        var map = new google.maps.Map(selectMap, mapOptions);
+			        selectMap.addEventListener('mousedown' /*'mousedown'*/, function(e) {
+							    e.stopPropagation();
+							}, false);
+			      }	
+			      initialize();					
+					});
+				});			 	
 			 	HotspotsCollection.addGroups("comunas");
 				$(".sorted-by-cerca-btn").on('tap', function(e){
 					HotspotsCollection.addCerca("cerca");
