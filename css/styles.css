@@ -149,4 +149,37 @@ body {
     z-index: 9000;
     height: 88% !important;
 }
-
+#button-info{
+    background: none !important; 
+    border: none !important;
+    margin-top: 5px;
+    margin-right: 5px !important;
+}
+#button-info .ui-btn-inner{
+    border: none !important;
+}
+#button-info.ui-shadow{
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow:none !important;
+}
+#about-content .center-wrapper{
+    background:#505050;
+    padding-top: 20px;
+    padding-bottom: 20px;   
+}
+#about-content{
+    padding: 0 !important;
+    line-height: 1.5em;
+}
+#info-text{
+    text-align:center; 
+    margin:0 auto; 
+    width:80%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+} 
+.ui-footer .ui-btn-right {
+    right: 43px !important;
+    margin-top:3px;
+}

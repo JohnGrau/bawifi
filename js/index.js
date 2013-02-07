@@ -9,8 +9,12 @@ var App = (function(global, hotspots){
 		//grabo la geolocalizacion
 	  whereami = new Point(position.coords.latitude, position.coords.longitude);
 		UsigLite.convertCoords({"longitud": whereami.longitud, "latitud":whereami.latitud}, function(error, puntousig){
-			whereami.setGKBAPoint(puntousig);
-			gcReady.resolve();
+			if(!error){
+				whereami.setGKBAPoint(puntousig);
+				gcReady.resolve();
+			}else{
+				alert("No fue posible establecer su ubicación. Puede ser que se encuentre fuera de la Ciudad Autónoma de Buenos Aires");
+			}
 		});
 	 	HotspotsCollection.computeDistance(whereami);
 	};
@@ -34,7 +38,7 @@ var App = (function(global, hotspots){
 				$('[data-role="footer"] ul li a').not('.ui-state-persist').removeClass('ui-btn-down-a').removeClass('ui-btn-down-a').addClass('ui-btn-up-a');
 			});
 			$document.on('pagebeforeshow',function(){
-				$(".ui-header").on('tap', function(e){
+				$(".ui-header").not('.button-info').on('tap', function(e){
 					//fix this
 					$('#hotspots-content,#comunas-content,#recorridos-content,#tipos-content,#cerca-content').iscrollview("scrollTo", 0, 0, 500);
 				});
@@ -62,7 +66,7 @@ var App = (function(global, hotspots){
 						HotspotsCollection.addTrip(recorrido);
 						$.mobile.changePage('#recorridos-page');
 					}else{
-						log(error);
+						alert(error);
 					}
 					$.mobile.loading('hide');
 				});

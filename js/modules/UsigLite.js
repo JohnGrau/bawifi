@@ -14,13 +14,14 @@ var UsigLite = (function() {
 							try{
 								callback(null, {"tiempo":recorrido.getTime(),"detalle": detalle, "tipo":tipo});   
 							}catch(err){
-								log("paso por el catch");
-								callback(err,null);
+								var mensaje = "Error al obtener el recorrido. Puede ser que se encuentre fuera de la Ciudad Autónoma de Buenos Aires";
+								callback(mensaje,null);
 							}	
 						}									
 					});					
 				}catch(err){
-					callback(err,null)
+					var mensaje = "Error al obtener el recorrido. Puede ser que se encuentre fuera de la Ciudad Autónoma de Buenos Aires";
+					callback(mensaje,null);
 				}
 
 			});  
