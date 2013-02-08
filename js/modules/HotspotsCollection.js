@@ -20,6 +20,9 @@ var HotspotsCollection = (function(global, hotspots){
 	};
 	var addListeners = function(name){
 		$("#"+name+" li a").on('tap',function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			log("#"+name+" li a");
 	 		var $this = $(this);
 	 		if(!$this.hasClass('hotspot')){
 		 		var filter = $this.jqmData("key");

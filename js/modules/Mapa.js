@@ -1,5 +1,3 @@
-
-
 var Mapa = (function(global){
 	var map
 		, markers = [];
@@ -16,7 +14,12 @@ var Mapa = (function(global){
       //previene que se mueva el mapa
       selectMap.addEventListener('touchstart' /*'mousedown'*/, function(e) {
 			    e.stopPropagation();
-			}, false);		
+			}, false);	
+      $('[data-role=content]').height($(window).height() - (5 + $('[data-role=header]').last().height() + $('[data-role=footer]').last().height()));
+      google.maps.event.trigger(map, 'resize');      	
+    },
+    resize: function(){
+      google.maps.event.trigger(map, 'resize');
     },
     clearOverlays: function() {
     	var l = markers.length;

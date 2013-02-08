@@ -23,7 +23,6 @@ var UsigLite = (function() {
 					var mensaje = "Error al obtener el recorrido. Puede ser que se encuentre fuera de la Ciudad Autónoma de Buenos Aires";
 					callback(mensaje,null);
 				}
-
 			});  
 		},
 		reverseGeocoder: function(punto, callback){
@@ -42,7 +41,9 @@ var UsigLite = (function() {
 		},
 		//convierte un punto de lat y long en un punto de la usig
 		convertCoords: function(punto, callback){
+			console.log("convertCoords");
 			$.getJSON("http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x="+punto.longitud+"&y="+punto.latitud+"&output=gkba", function(data){
+				console.log(data);
 				if(typeof(callback) == typeof(Function)){
 					try{
 						if(data.tipo_resultado === "error"){

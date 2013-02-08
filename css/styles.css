@@ -1,6 +1,4 @@
-html { height: 100% }
 body {
-    overflow:hidden !important;
     -webkit-font-smoothing: subpixel-antialiased !important;
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
@@ -8,7 +6,6 @@ body {
     -ms-user-select: none !important;
     -moz-user-select: none !important;
     user-select: none !important;
-    height: 100%;
     margin: 0; 
     padding: 0;      
 }
@@ -16,39 +13,6 @@ body {
 	background:#ffffff !important;
 	text-shadow:none !important;
 	-webkit-transform: translateZ(0) !important;
-}
-@media only screen and (max-height: 280px){
-    .ui-header .ui-btn {
-        display: none !important;
-    }
-}
-@media DISABLED {
-    .iscroll-scroller,
-    .iscroll-scroller * {
-        -webkit-transform: translateZ(0) !important;
-    }
-}
-@media all {
-    .iscroll-content li  {
-        -webkit-transform: translateZ(0) !important;
-    }
-}
-.iscroll-content .ui-listview li.ui-btn-up-f{
-    background-image: none !important;
-    text-shadow: none !important;
-}
-
-.iscroll-content .ui-listview li.ui-btn-hover-f{
-    background-image: none !important;
-    text-shadow: none !important;
-}
-.iscroll-content .ui-listview li.ui-btn-down-f{
-    background-image: none !important;
-    text-shadow: none !important;
-}
-/* Remove background image from non-button scroller content */
-.iscroll-content .ui-body-c{
-    background-image: none !important;
 }
 #footer-nav .ui-btn .ui-icon {
     width: 30px!important;
@@ -80,15 +44,15 @@ body {
 }
 /*icono footer tipo*/
 .ui-icon-tipo{
-    background: url('/img/btn_tipo_off.png') 50% 50% no-repeat;
+    background: url('../img/btn_tipo_off.png') 50% 50% no-repeat;
 }
 /*icono footer cerca*/
 .ui-icon-cerca{
-    background: url('/img/btn_cerca_off.png') 50% 50% no-repeat;
+    background: url('../img/btn_cerca_off.png') 50% 50% no-repeat;
 }
 /*icono footer comuna*/
 .ui-icon-comuna{
-    background: url('/img/btn_comuna_off.png') 50% 50% no-repeat;
+    background: url('../img/btn_comuna_off.png') 50% 50% no-repeat;
 }
 /*centrado de la imagen del header*/
 .center-wrapper {
