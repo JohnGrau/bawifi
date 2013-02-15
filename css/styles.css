@@ -16,7 +16,7 @@ body {
 }
 #footer-nav .ui-btn .ui-icon {
     width: 30px!important;
-    height: 22px!important;
+    height: 30px!important;
     margin-left: -15px !important;
     box-shadow: none!important;
     -moz-box-shadow: none!important;
@@ -45,14 +45,26 @@ body {
 /*icono footer tipo*/
 .ui-icon-tipo{
     background: url('../img/btn_tipo_off.png') 50% 50% no-repeat;
+    -moz-background-size: 24px 24px;
+    -o-background-size: 24px 24px;
+    -webkit-background-size: 24px 24px;
+    background-size: 24px 24px;    
 }
 /*icono footer cerca*/
 .ui-icon-cerca{
     background: url('../img/btn_cerca_off.png') 50% 50% no-repeat;
+    -moz-background-size: 24px 24px;
+    -o-background-size: 24px 24px;
+    -webkit-background-size: 24px 24px;
+    background-size: 24px 24px;    
 }
 /*icono footer comuna*/
 .ui-icon-comuna{
     background: url('../img/btn_comuna_off.png') 50% 50% no-repeat;
+    -moz-background-size: 24px 24px;
+    -o-background-size: 24px 24px;
+    -webkit-background-size: 24px 24px;
+    background-size: 24px 24px;    
 }
 /*centrado de la imagen del header*/
 .center-wrapper {

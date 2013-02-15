@@ -8,7 +8,6 @@ var App = (function(global, hotspots){
 
 	var onSuccess = function(position) {
 		//grabo la geolocalizacion
-
 	  whereami = new Point(position.coords.latitude, position.coords.longitude);
 	  console.log("antes de convertCoords");
 		UsigLite.convertCoords({"longitud": whereami.longitud, "latitud":whereami.latitud}, function(error, puntousig){
@@ -26,7 +25,11 @@ var App = (function(global, hotspots){
 	};
 	var onError = function(error) {
 		//mostrar algo que indique que todavia no se localizo
-	  navigator.notification.alert("Error al geolocalizar.", null, "Error", "Cerrar");
+		console.log(error.code == PositionError.PERMISSION_DENIED);
+		console.log(error.code == PositionError.POSITION_UNAVAILABLE);
+		console.log(error.code == PositionError.TIMEOUT);
+
+	  navigator.notification.alert("Error al geolocalizar. Active el posicionamiento en el dispositivo y reinicie la aplicación", null, "Error", "Cerrar");
 	};
 	return {
 		getDest: function(){
@@ -44,7 +47,8 @@ var App = (function(global, hotspots){
 				$('[data-role="footer"] ul li a').not('.ui-state-persist').removeClass('ui-btn-down-a').removeClass('ui-btn-down-a').addClass('ui-btn-up-a');
 			});
 			document.addEventListener("deviceready", function(){
-				navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });	
+				navigator.splashscreen.show();
+				navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 10000});	
 				pgReady.resolve();
 			}, false);
 			$document.on("gettrip", function(e, dest, nombre, domicilio){
@@ -76,7 +80,7 @@ var App = (function(global, hotspots){
 				}
 			});
 			//phonegap listo y jquery mobile listo
-			$.when(jqmReady, pgReady).then(function () {			
+			$.when(jqmReady, pgReady).then(function () {
 				$("#mapa-page").on('pageshow', function(e){ 
 					Mapa.init();
 					Mapa.addMarker({"lat":currentDest.latitud,"long":currentDest.longitud, "nombre":destName, "domicilio": destAddr});						
